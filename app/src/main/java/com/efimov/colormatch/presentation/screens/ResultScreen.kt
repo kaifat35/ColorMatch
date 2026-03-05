@@ -14,6 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -130,7 +131,10 @@ fun HarmonyCategory(title: String, colors: List<PaletteColor>) {
             horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             items(colors) { paletteColor ->
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    modifier = Modifier.padding(4.dp)
+                ) {
                     Box(
                         modifier = Modifier
                             .size(50.dp)
@@ -140,9 +144,12 @@ fun HarmonyCategory(title: String, colors: List<PaletteColor>) {
                     Text(
                         text = paletteColor.name,
                         fontSize = 12.sp,
-                        maxLines = 1,
+                        maxLines = 2,
                         overflow = TextOverflow.Ellipsis,
-                        modifier = Modifier.width(60.dp)
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier
+                            .padding(top = 4.dp)
+                            .wrapContentWidth()
                     )
                 }
             }
