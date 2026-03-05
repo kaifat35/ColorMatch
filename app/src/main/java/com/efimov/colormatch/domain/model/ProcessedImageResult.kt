@@ -8,5 +8,6 @@ data class ProcessedImageResult(
     val thumbnail: Bitmap,
     val averageColor: Color,
     val closestPaletteColor: PaletteColor,
+    val colorName: String,
     val rgbHex: String
 )

@@ -7,16 +7,40 @@ data class PaletteColor(val name: String, val color: Color)
 
 object BasicPalette {
     val colors = listOf(
-        PaletteColor("Красный", Color(0xFFF44336)),
-        PaletteColor("Оранжевый", Color(0xFFFF9800)),
-        PaletteColor("Жёлтый", Color(0xFFFFEB3B)),
-        PaletteColor("Зелёный", Color(0xFF4CAF50)),
-        PaletteColor("Голубой", Color(0xFF03A9F4)),
-        PaletteColor("Синий", Color(0xFF2196F3)),
-        PaletteColor("Фиолетовый", Color(0xFF9C27B0)),
-        PaletteColor("Розовый", Color(0xFFE91E63)),
-        PaletteColor("Коричневый", Color(0xFF795548)),
-        PaletteColor("Серый", Color(0xFF9E9E9E)),
+        PaletteColor("Красный", Color(0xFFFF0000)),
+        PaletteColor("Тёмно-красный", Color(0xFF8B0000)),
+        PaletteColor("Светло-красный", Color(0xFFFF6347)), // Tomato
+        PaletteColor("Бордовый", Color(0xFF800000)),
+        PaletteColor("Оранжевый", Color(0xFFFFA500)),
+        PaletteColor("Тёмно-оранжевый", Color(0xFFFF8C00)),
+        PaletteColor("Светло-оранжевый", Color(0xFFFFD700)), // Gold
+        PaletteColor("Жёлтый", Color(0xFFFFFF00)),
+        PaletteColor("Светло-жёлтый", Color(0xFFFFFFE0)),
+        PaletteColor("Оливковый", Color(0xFF808000)),
+        PaletteColor("Зелёный", Color(0xFF00FF00)),
+        PaletteColor("Тёмно-зелёный", Color(0xFF006400)),
+        PaletteColor("Светло-зелёный", Color(0xFF90EE90)),
+        PaletteColor("Изумрудный", Color(0xFF50C878)),
+        PaletteColor("Голубой", Color(0xFF00FFFF)),
+        PaletteColor("Тёмно-голубой", Color(0xFF00CED1)),
+        PaletteColor("Светло-голубой", Color(0xFFE0FFFF)),
+        PaletteColor("Синий", Color(0xFF0000FF)),
+        PaletteColor("Тёмно-синий", Color(0xFF00008B)),
+        PaletteColor("Светло-синий", Color(0xFFADD8E6)),
+        PaletteColor("Фиолетовый", Color(0xFFEE82EE)),
+        PaletteColor("Тёмно-фиолетовый", Color(0xFF9400D3)),
+        PaletteColor("Светло-фиолетовый", Color(0xFFD8BFD8)),
+        PaletteColor("Пурпурный", Color(0xFFFF00FF)),
+        PaletteColor("Розовый", Color(0xFFFFC0CB)),
+        PaletteColor("Тёмно-розовый", Color(0xFFFF1493)),
+        PaletteColor("Светло-розовый", Color(0xFFFFB6C1)),
+        PaletteColor("Коричневый", Color(0xFFA52A2A)),
+        PaletteColor("Тёмно-коричневый", Color(0xFF5D3A1A)),
+        PaletteColor("Светло-коричневый", Color(0xFFD2B48C)),
+        PaletteColor("Бежевый", Color(0xFFF5F5DC)),
+        PaletteColor("Серый", Color(0xFF808080)),
+        PaletteColor("Тёмно-серый", Color(0xFF404040)),
+        PaletteColor("Светло-серый", Color(0xFFD3D3D3)),
         PaletteColor("Чёрный", Color(0xFF000000)),
         PaletteColor("Белый", Color(0xFFFFFFFF))
     )
@@ -82,4 +106,5 @@ object BasicPalette {
         val dB = lab1[2] - lab2[2]
         return (dL * dL + dA * dA + dB * dB).toDouble()
     }
+
 }

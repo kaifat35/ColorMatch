@@ -74,7 +74,7 @@ class ColorViewModel @Inject constructor(
             val entry = HistoryEntry(
                 bitmap = result.thumbnail,
                 color = result.averageColor,
-                name = result.closestPaletteColor.name,
+                name = result.colorName,
                 rgb = result.rgbHex
             )
             addHistoryUseCase(entry)
@@ -109,7 +109,8 @@ class ColorViewModel @Inject constructor(
             thumbnail = entry.bitmap,
             averageColor = entry.color,
             closestPaletteColor = PaletteColor(entry.name, entry.color),
-            rgbHex = entry.rgb
+            rgbHex = entry.rgb,
+            colorName = entry.name
         )
         _currentResult.value = result
         _harmonies.value = computeHarmoniesUseCase(entry.color)

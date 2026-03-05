@@ -88,7 +88,7 @@ fun ResultContent(
             colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
         ) {
             Column(modifier = Modifier.padding(16.dp)) {
-                Text("Название: ${result.closestPaletteColor.name}", style = MaterialTheme.typography.bodyLarge)
+                Text("Название: ${result.colorName}", style = MaterialTheme.typography.bodyLarge)
                 Text("RGB: ${result.rgbHex}", style = MaterialTheme.typography.bodyMedium)
             }
         }
